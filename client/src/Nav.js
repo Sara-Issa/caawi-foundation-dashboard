@@ -86,7 +86,7 @@ function Nav() {
             </li>
           </Link>
           <li className="w-36">
-            <div>
+            <div className="">
               <div
                 onClick={() => setIsList(!isList)}
                 className="w-64 p-4 shadow rounded text-lg font-medium leading-none text-white flex items-center justify-between cursor-pointer"
@@ -127,47 +127,8 @@ function Nav() {
                 </div>
               </div>
               {isList && (
-                <div className="w-64 mt-2 p-4 bg-white shadow rounded">
-                  <Link to="donationForm">
-                    <li
-                      onClick={() => setActiveStatus(2)}
-                      className={
-                        activeStatus === 2
-                          ? "text-lg border-emerald-700 pt-3 rounded-t text-black mr-12"
-                          : "text-lg text-black py-3 flex items-center mr-12 hover:text-black cursor-pointer"
-                      }
-                    >
-                      <div className="flex items-center mb-3">
-                        <span>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="icon icon-tabler icon-tabler-eye"
-                            width={16}
-                            height={16}
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="currentColor"
-                            fill="none"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          >
-                            <path stroke="none" d="M0 0h24v24H0z" />
-                            <circle cx={12} cy={12} r={2} />
-                            <path d="M2 12l1.5 2a11 11 0 0 0 17 0l1.5 -2" />
-                            <path d="M2 12l1.5 -2a11 11 0 0 1 17 0l1.5 2" />
-                          </svg>
-                        </span>
-                        <span className="ml-1 font-normal">
-                          {activeStatus === 2
-                            ? "Donation Money"
-                            : "Donation Money"}
-                        </span>
-                      </div>
-                      {activeStatus === 2 && (
-                        <div className="w-full h-1 bg-amber-400 rounded-t-md" />
-                      )}
-                    </li>
-                  </Link>
+                <div className="w-64 mt-2 p-4 bg-white shadow rounded z-10 absolute">
+                  
                   <Link to="donateForm">
                         <li
                           onClick={() => setActiveStatus(4)}
@@ -333,7 +294,7 @@ function Nav() {
                 </div>
               </div>
               {isVolunteerList && (
-                <div className="w-64 mt-2 p-4 bg-white shadow rounded">
+                <div className="w-64 mt-2 p-4 bg-white shadow rounded z-10 absolute">
           <Link to="volunteerForm">
             <li
               onClick={() => setActiveStatus(5)}
@@ -368,44 +329,6 @@ function Nav() {
                 </span>
               </div>
               {activeStatus === 5 && (
-                <div className="w-full h-1 bg-amber-400 rounded-t-md" />
-              )}
-            </li>
-          </Link>
-          <Link to="/volunteerApply">
-            <li
-              onClick={() => setActiveStatus(8)}
-              className={
-                activeStatus === 8
-                  ? "text-lg border-emerald-700 pt-3 rounded-t text-black mr-12"
-                  : "text-lg text-black py-3 flex items-center mr-12 hover:text-black cursor-pointer"
-              }
-            >
-              <div className="flex items-center mb-3">
-                <span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="icon icon-tabler icon-tabler-eye"
-                    width={16}
-                    height={16}
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" />
-                    <circle cx={12} cy={12} r={2} />
-                    <path d="M2 12l1.5 2a11 11 0 0 0 17 0l1.5 -2" />
-                    <path d="M2 12l1.5 -2a11 11 0 0 1 17 0l1.5 2" />
-                  </svg>
-                </span>
-                <span className="ml-1 font-normal">
-                  {activeStatus === 8 ? "Volunteer" : "Volunteer"}
-                </span>
-              </div>
-              {activeStatus === 8 && (
                 <div className="w-full h-1 bg-amber-400 rounded-t-md" />
               )}
             </li>
@@ -539,7 +462,7 @@ function Nav() {
                 </div>
               </div>
               {isJobList && (
-                <div className="w-64 mt-2 p-4 bg-white shadow rounded">
+                <div className="w-64 mt-2 p-4 bg-white shadow rounded z-10 absolute">
                   <Link to="hiringForm">
             <li
               onClick={() => setActiveStatus(6)}
@@ -578,44 +501,6 @@ function Nav() {
               )}
             </li>
           </Link>
-          <Link to="/jobApply">
-            <li
-              onClick={() => setActiveStatus(7)}
-              className={
-                activeStatus === 7
-                  ? "text-lg border-emerald-700 pt-3 rounded-t text-black mr-12"
-                  : "text-lg text-black py-3 flex items-center mr-12 hover:text-black cursor-pointer"
-              }
-            >
-              <div className="flex items-center mb-3">
-                <span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="icon icon-tabler icon-tabler-eye"
-                    width={16}
-                    height={16}
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" />
-                    <circle cx={12} cy={12} r={2} />
-                    <path d="M2 12l1.5 2a11 11 0 0 0 17 0l1.5 -2" />
-                    <path d="M2 12l1.5 -2a11 11 0 0 1 17 0l1.5 2" />
-                  </svg>
-                </span>
-                <span className="ml-1 font-normal">
-                  {activeStatus === 7 ? "Apply Job" : "Apply Job"}
-                </span>
-              </div>
-              {activeStatus === 7 && (
-                <div className="w-full h-1 bg-amber-400 rounded-t-md" />
-              )}
-            </li>
-          </Link> 
           <Link to="/jobReports">
             <li
               onClick={() => setActiveStatus(15)}
@@ -703,7 +588,7 @@ function Nav() {
             </div>
           </li>
 
-          <li>
+          <li className="mb-2">
             <Link to="/signup">
             <button className="w-32 h-10 bg-yellow border-none rounded-2xl text-white font-semibold pb-1 mb-10 absolute top-0 right-10">
                 SignUp
